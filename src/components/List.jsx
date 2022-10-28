@@ -5,7 +5,7 @@ function List(){
     const nonChemist=people.filter(person => person.profession !== "chemist")
     const chemistList=chemist.map(
         person => 
-        <li>
+        <li key={person.id}>
             <img
               src={getImageUrl(person)}
               alt={person.name}
@@ -19,7 +19,7 @@ function List(){
         )
     const nonChemistList=nonChemist.map(
         person =>
-        <li>
+        <li key={person.id}>
             <img
               src={getImageUrl(person)}
               alt={person.name}
